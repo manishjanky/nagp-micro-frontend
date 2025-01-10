@@ -1,0 +1,44 @@
+<nav class="navbar navbar-dark navbar-expand-sm bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">mSurance</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasDarkNavbar"
+      aria-controls="offcanvasDarkNavbar"
+      aria-label="Toggle navigation"
+      (click)="isMenuOpen = true"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="offcanvas offcanvas-end text-bg-dark"
+      tabindex="-1"
+      id="offcanvasDarkNavbar"
+      aria-labelledby="offcanvasDarkNavbarLabel"
+      [ngClass]="{ show: isMenuOpen }"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Insurance</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+          (click)="isMenuOpen = false"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-md-none">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/insurance">Get Insurance</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/payment">Renew Insurance</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
