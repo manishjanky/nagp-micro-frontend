@@ -1,27 +1,44 @@
-# NagpMicroFrontend
+# nagp-micro-frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+The repository contains 3 projects
 
-## Development server
+- `container` - Shell application that will beintegrate the micro-frontend together
+- `insurance` - Micro-Frontend 1 for insurances, Shows a list of available insurance offerings
+- `payment` - Micro-Frontend 2 for payemnts, handels payments for buying insurances
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Steps to steup
 
-## Code scaffolding
+Clone the repository on you local machine. Then execute the below commands on a terminal
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+// skip this if your cwd is alreday the root folder of the repository
+cd nagp-micro-frontend 
 
-## Build
+// Install dependencies
+yarn install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+// Start local server
+yarn start:all
+```
 
-## Running unit tests
+Now this will start the local server as per below and open 3 tabs in your browser respectively
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- `container` application on port: `4200` => `http://localhost:4200`
+- `insurance` micro front end on port: `4201` => `http://localhost:4201`
+- `payment` micro front end on port: `4202` => `http://localhost:4202`
 
-## Running end-to-end tests
+### Communication bewtween micro-front ends
+The `MfeBridgeService` faciliates the communication between `insurance` and `payments` micro-front ends.. The insurance MFE initiates a payemnt request and the payments MFE takes that request and handels the payemnt.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+### OWASP Top 10
+Implemented OWASP `A06:2021 Vulnerable and Oudated components` the same can be validated using the below command
+```
+npm audit
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Netlify
+All the 3 application are hosted on netlify following the micro-front end approach below are the details of the same
+* `container` : [Container - Netlify](https://starlit-dodol-59f5b8.netlify.app)
+* `insurance` : [Insurance MFE - Netlify](https://sparkly-tarsier-82123e.netlify.app)
+* `container` : [Payments MFE - Netlify](https://regal-queijadas-1423c0.netlify.app)
