@@ -1,0 +1,16 @@
+.form {
+  gap: 10px;
+  max-width: 500px;
+
+  button[type="submit"] {
+    max-width: 180px;
+  }
+
+  .form-control {
+    &.ng-touched {
+      &.ng-invalid {
+        border-color: #dc3545;
+      }
+    }
+  }
+}

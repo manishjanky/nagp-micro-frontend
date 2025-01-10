@@ -1,0 +1,14 @@
+ul.navbar-nav {
+  bottom: 0;
+  align-items: end;
+  width: 100%;
+
+  li {
+    height: fit-content;
+    min-width: 48%;
+    
+    .btn{
+       width: 100%;
+    }
+  }
+}

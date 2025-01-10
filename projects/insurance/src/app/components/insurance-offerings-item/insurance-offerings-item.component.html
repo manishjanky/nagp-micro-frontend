@@ -1,0 +1,52 @@
+<div class="card m-3" *ngIf="item">
+  <div class="card-header">
+    <div class="row">
+      <div class="col-12">
+        <h5>{{ item.company }}</h5>
+      </div>
+      <div class="col-2">
+        <img
+          [src]="'/assets/images/' + item.category.toLowerCase() + '.png'"
+          alt="item.category"
+          class="img-fluid category"
+        />
+      </div>
+      <div class="col-3">
+        <span class="text-body-secondary">Type:</span> <br />
+        <strong>{{ item.type }}</strong>
+      </div>
+      <div class="col-2">
+        <span class="text-body-secondary">Claims Settled:</span>
+        <br />
+        <strong>{{ item.settlementRatio }}%</strong>
+      </div>
+      <div class="col-2">
+        <span class="text-body-secondary">Zero-dep claims:</span> <br />
+        <strong>{{ item.maxZeroDepClaims }}</strong>
+      </div>
+      <div class="col-3">
+        <button type="button" class="btn btn-primary" (click)="buy()">
+          Buy for: {{ item.premium | currency : "INR" }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <h6 class="card-title">Add ons</h6>
+    <p class="card-text border-bottom pb-3">
+      <span
+        class="badge text-bg-light border m-1"
+        *ngFor="let addon of item.addons.split(',')"
+        >{{ addon }}</span
+      >
+    </p>
+    <h6 class="card-title">Claim Benefits</h6>
+    <p class="card-text">
+      <span
+        class="badge text-bg-light border m-1"
+        *ngFor="let benefit of item.claimBenefits.split(',')"
+        >{{ benefit }}</span
+      >
+    </p>
+  </div>
+</div>

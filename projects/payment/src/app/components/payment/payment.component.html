@@ -1,0 +1,48 @@
+<div class="payment-options" *ngIf="canInitiatePayment$ | async">
+  <div *ngIf="paymentRequest$ | async as request" class="payment-request mb-4">
+    Paying
+    <strong>{{ request.amount | currency : "INR" }}</strong>
+    for
+    <strong>{{ request.description }}</strong>
+  </div>
+  <h6>How would you like to pay?</h6>
+  <div class="card form-check">
+    <div class="card-body">
+      <input
+        class="form-check-input"
+        type="radio"
+        id="creditCard"
+        name="paymentMethod"
+        (change)="showCreditCardForm = true"
+      />
+      <label class="form-check-label" for="creditCard">Credit Card</label>
+      <div *ngIf="showCreditCardForm" class="credit-card-form mt-4">
+        <app-credit-card-form [amount]="amount"></app-credit-card-form>
+      </div>
+    </div>
+  </div>
+  <div class="card form-check">
+    <div class="card-body">
+      <input
+        class="form-check-input"
+        type="radio"
+        id="paypal"
+        name="paymentMethod"
+        (change)="showCreditCardForm = false"
+      />
+      <label class="form-check-label" for="paypal">PayPal</label>
+    </div>
+  </div>
+  <div class="card form-check">
+    <div class="card-body">
+      <input
+        class="form-check-input"
+        type="radio"
+        id="bankTransfer"
+        name="paymentMethod"
+        (change)="showCreditCardForm = false"
+      />
+      <label class="form-check-label" for="bankTransfer">Bank Transfer</label>
+    </div>
+  </div>
+</div>

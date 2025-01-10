@@ -1,0 +1,51 @@
+<app-navbar />
+<div class="container pt-5 mt-2">
+  <router-outlet />
+</div>
+
+<div
+  class="modal"
+  tabindex="-1"
+  *ngIf="showHelpAlert"
+  [class.show]="showHelpAlert"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Need Help?</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="showHelpAlert = false"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Not Help choosing a plan. Please explore our plans to better
+          understand our offerings!
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          routerLink="/insurance"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          (click)="showHelpAlert = false"
+        >
+          Show Plans
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="showHelpAlert = false"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
