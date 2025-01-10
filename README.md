@@ -28,7 +28,7 @@ Now this will start the local server as per below and open 3 tabs in your browse
 - `payment` micro front end on port: `4202` => `http://localhost:4202`
 
 ### Communication bewtween micro-front ends
-The `MfeBridgeService` faciliates the communication between `insurance` and `payments` micro-front ends.. The insurance MFE initiates a payemnt request and the payments MFE takes that request and handels the payemnt.
+The `MfeBridgeService` localted at `libs/shared/src/services/bridge.service.ts` faciliates the communication between `insurance` and `payments` micro-front ends.. The insurance MFE initiates a payemnt request and the payments MFE takes that request and handels the payemnt.
 
 
 ### OWASP Top 10
