@@ -2,7 +2,7 @@
 
 The repository contains 3 projects
 
-- `container` - Shell application that will beintegrate the micro-frontend together
+- `container` - Shell application that integrates/serves as the container app for the micro-frontends
 - `insurance` - Micro-Frontend 1 for insurances, Shows a list of available insurance offerings
 - `payment` - Micro-Frontend 2 for payemnts, handels payments for buying insurances
 
