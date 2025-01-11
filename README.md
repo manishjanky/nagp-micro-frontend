@@ -12,7 +12,7 @@ Clone the repository on you local machine. Then execute the below commands on a 
 
 ```
 // skip this if your cwd is alreday the root folder of the repository
-cd nagp-micro-frontend 
+cd nagp-micro-frontend
 
 // Install dependencies
 yarn install
@@ -28,17 +28,25 @@ Now this will start the local server as per below and open 3 tabs in your browse
 - `payment` micro front end on port: `4202` => `http://localhost:4202`
 
 ### Communication bewtween micro-front ends
-The `MfeBridgeService` localted at `libs/shared/src/services/bridge.service.ts` faciliates the communication between `insurance` and `payments` micro-front ends.. The insurance MFE initiates a payemnt request and the payments MFE takes that request and handels the payemnt.
 
+The `MfeBridgeService` localted at `libs/shared/src/services/bridge.service.ts` faciliates the communication between `insurance` and `payments` micro-front ends. The insurance MFE initiates a payemnt request and the payments MFE takes that request and handels the payemnt.
 
 ### OWASP Top 10
+
 Implemented OWASP `A06:2021 Vulnerable and Oudated components` the same can be validated using the below command
+
 ```
 npm audit
 ```
 
+### Web worker
+
+A Web worker in `container` app keeps track of the time the user is still on the home page of the application and after `5000ms` it shows a poup dialog. The worker is located at `projects/container/src/app/app.worker.ts`.
+
 ## Netlify
+
 All the 3 application are hosted on netlify following the micro-front end approach below are the details of the same
-* `container` : [Container - Netlify](https://starlit-dodol-59f5b8.netlify.app)
-* `insurance` : [Insurance MFE - Netlify](https://sparkly-tarsier-82123e.netlify.app)
-* `container` : [Payments MFE - Netlify](https://regal-queijadas-1423c0.netlify.app)
+
+- `container` : [Container - Netlify](https://starlit-dodol-59f5b8.netlify.app)
+- `insurance` : [Insurance MFE - Netlify](https://sparkly-tarsier-82123e.netlify.app)
+- `container` : [Payments MFE - Netlify](https://regal-queijadas-1423c0.netlify.app)
