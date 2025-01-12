@@ -6,7 +6,7 @@ The repository contains 3 projects
 - `insurance` - Micro-Frontend 1 for insurances, Shows a list of available insurance offerings
 - `payment` - Micro-Frontend 2 for payemnts, handels payments for buying insurances
 
-### Steps to steup
+### Steps to setup
 
 Clone the repository on you local machine. Then execute the below commands on a terminal
 
