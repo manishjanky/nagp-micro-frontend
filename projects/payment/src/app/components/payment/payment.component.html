@@ -4,6 +4,10 @@
     <strong>{{ request.amount | currency : "INR" }}</strong>
     for
     <strong>{{ request.description }}</strong>
+
+    <div *ngIf="request.policyNumber" class="mt-2">
+      Payment for <strong>{{ request.policyNumber }}</strong> policy renewal
+    </div>
   </div>
   <h6>How would you like to pay?</h6>
   <div class="card form-check">
