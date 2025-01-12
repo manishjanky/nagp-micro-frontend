@@ -4,12 +4,17 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 import { CommonModule } from '@angular/common';
 import {
+  InsuranceDetailsComponent,
   InsuranceOfferingsComponent,
   InsuranceOfferingsItemComponent,
 } from './components';
 
 @NgModule({
-  declarations: [InsuranceOfferingsComponent, InsuranceOfferingsItemComponent],
+  declarations: [
+    InsuranceOfferingsComponent,
+    InsuranceOfferingsItemComponent,
+    InsuranceDetailsComponent,
+  ],
   imports: [CommonModule, RouterModule.forChild(routes)],
   providers: [],
   bootstrap: [AppComponent],

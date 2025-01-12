@@ -1,0 +1,70 @@
+<div class="card" *ngIf="details">
+  <div class="card-header">
+    <h3>
+      Your <i>{{ details.company }}</i> policy details
+    </h3>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-6">
+        <p><strong>Owner Name:</strong> {{ details.owner }}</p>
+      </div>
+      <div class="col-md-6">
+        <p><strong>Policy Number:</strong> {{ details.policyNumber }}</p>
+      </div>
+      <div class="col-md-6">
+        <p><strong>Expiry Date:</strong> {{ details.expiryDate | date }}</p>
+      </div>
+      <div class="col-md-6">
+        <p class="d-flex align-items-center">
+          <strong>Policy Type:</strong>
+          {{ details.type }}
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p class="d-flex align-items-center">
+          <strong>Zero dep claims:</strong>
+          {{ details.maxZeroDepClaims }}
+        </p>
+      </div>
+      <div class="col-md-6">
+        <p><strong>Vehicle Number:</strong> {{ details.vehicleNumber }}</p>
+      </div>
+      <div class="col-md-6">
+        <p><strong>Vehicle Make:</strong> {{ details.vehicleMake }}</p>
+      </div>
+      <div class="col-md-6">
+        <p class="d-flex align-items-center">
+          <strong>Vehicle Color:</strong>
+          <span
+            class="badge d-inline-block ms-2"
+            [style.background]="details.vehicleColor"
+          ></span>
+        </p>
+      </div>
+    </div>
+    <h6 class="card-title">Add ons</h6>
+    <p class="card-text border-bottom pb-3">
+      <span
+        class="badge text-bg-light border m-1"
+        *ngFor="let addon of details.addons.split(',')"
+        >{{ addon }}</span
+      >
+    </p>
+    <h6 class="card-title">Claim Benefits</h6>
+    <p class="card-text">
+      <span
+        class="badge text-bg-light border m-1"
+        *ngFor="let benefit of details.claimBenefits.split(',')"
+        >{{ benefit }}</span
+      >
+    </p>
+    <div class="row">
+      <div class="col-12">
+        <button type="button" class="btn btn-primary" (click)="renew()">
+          Renew for: {{ details.premium | currency : "INR" }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
