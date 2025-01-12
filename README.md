@@ -49,4 +49,4 @@ All the 3 application are hosted on netlify following the micro-front end approa
 
 - `container` : [Container - Netlify](https://starlit-dodol-59f5b8.netlify.app)
 - `insurance` : [Insurance MFE - Netlify](https://sparkly-tarsier-82123e.netlify.app)
-- `payments` : [Payments MFE - Netlify](https://regal-queijadas-1423c0.netlify.app)
+- `payment` : [Payments MFE - Netlify](https://regal-queijadas-1423c0.netlify.app)
