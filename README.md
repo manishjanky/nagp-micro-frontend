@@ -47,6 +47,6 @@ A Web worker in `container` app keeps track of the time the user is still on the
 
 All the 3 application are hosted on netlify following the micro-front end approach below are the details of the same
 
-- `container` : [Container - Netlify](https://starlit-dodol-59f5b8.netlify.app)
-- `insurance` : [Insurance MFE - Netlify](https://sparkly-tarsier-82123e.netlify.app)
-- `payment` : [Payments MFE - Netlify](https://regal-queijadas-1423c0.netlify.app)
+- `container` : [Container - Netlify](https://kaleidoscopic-semolina-27b8b8.netlify.app)
+- `insurance` : [Insurance MFE - Netlify](https://stellar-profiterole-a3c094.netlify.app)
+- `payment` : [Payments MFE - Netlify](https://cerulean-lamington-00a451.netlify.app)
