@@ -26,4 +26,13 @@ export class MfeBridgeService {
       description: `${item.company}'s ${item.category} ${item.type} Insurance`,
     });
   }
+
+  renewInsurance(paymentId: string, item: any) {
+    this.initPaymentRequest$.next({
+      amount: item.premium,
+      paymentId,
+      policyNumber: item.policyNumber,
+      description: `${item.company}'s ${item.category} ${item.type} Insurance`,
+    });
+  }
 }
