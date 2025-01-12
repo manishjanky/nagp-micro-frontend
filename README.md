@@ -38,6 +38,8 @@ Implemented OWASP `A06:2021 Vulnerable and Oudated components` the same can be v
 ```
 npm audit
 ```
+##### As of 12/01/2025
+![image](https://github.com/user-attachments/assets/b791bb5f-a5c2-478a-9b02-99dfb48bee7c)
 
 ### Web worker
 
